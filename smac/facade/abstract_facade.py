@@ -173,7 +173,7 @@ class AbstractFacade:
         self._config_selector = config_selector
         self._callbacks = callbacks
         self._overwrite = overwrite
-
+        #self._multifidelity_algorithm = multi_fidelity_algorithm
         # Prepare the algorithm executer
         runner: AbstractRunner
         if isinstance(target_function, AbstractRunner):
