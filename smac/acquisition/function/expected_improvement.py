@@ -144,7 +144,7 @@ class EI(AbstractAcquisitionFunction):
 
             if (f < 0).any():
                 raise ValueError("Expected Improvement is smaller than 0 for at least one " "sample.")
-
+            print("X is: ---->" + X)
             return f
         else:
             if len(X.shape) == 1:
