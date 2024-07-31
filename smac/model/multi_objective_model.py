@@ -74,6 +74,10 @@ class MultiObjectiveModel(AbstractModel):
             raise ValueError("The list of surrogate models is empty.")
 
         for i, model in enumerate(self._models):
+            print(f"SHAPE: {Y.shape}")
+            print(f"Y: {Y}")
+            print(f"SHAPE: {X.shape}")
+            print(f"X: {X}")
             model.train(X, Y[:, i])
 
         return self

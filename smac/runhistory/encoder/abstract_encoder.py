@@ -80,8 +80,8 @@ class AbstractRunHistoryEncoder:
             )
 
         # Learned statistics
-        self._min_y = np.array([np.NaN] * self._n_objectives)
-        self._max_y = np.array([np.NaN] * self._n_objectives)
+        self._min_y = np.array([np.NaN] * self._n_objectives) #1
+        self._max_y = np.array([np.NaN] * self._n_objectives) #3
         self._percentile = np.array([np.NaN] * self._n_objectives)
         self._multi_objective_algorithm: AbstractMultiObjectiveAlgorithm | None = None
         self._runhistory: RunHistory | None = None
