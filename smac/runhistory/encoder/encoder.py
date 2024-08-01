@@ -4,7 +4,7 @@ from typing import Mapping
 
 import numpy as np
 
-from smac.runhistory.encoder import AbstractRunHistoryEncoder
+from SMAC3.smac.runhistory.encoder import AbstractRunHistoryEncoder
 from smac.runhistory.runhistory import TrialKey, TrialValue
 from smac.utils.configspace import convert_configurations_to_array
 from smac.utils.logging import get_logger
@@ -54,7 +54,11 @@ class RunHistoryEncoder(AbstractRunHistoryEncoder):
                 y_ = normalize_costs(run.cost, self.runhistory.objective_bounds)
                 y_agg = self._multi_objective_algorithm(y_)
                 y[row] = y_agg
+                print(f"BOUNDS: "+ str(self.runhistory.objective_bounds))
+                print(f"multi objective y ist -----!!!!--- : {y}")
+                print("multi")
             else:
+                print(f"single objective y ist -----!!!!--- : {y}")
                 y[row] = run.cost
 
         if y.size > 0:

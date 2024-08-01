@@ -617,7 +617,7 @@ class RunHistory(Mapping[TrialKey, TrialValue]):
             All configurations in the runhistory.
         """
         configs = list(self._config_ids.keys())
-
+        
         if sort_by == "cost":
             return sorted(configs, key=lambda config: self._cost_per_config[self._config_ids[config]])
         elif sort_by == "num_trials":

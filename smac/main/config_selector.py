@@ -198,12 +198,16 @@ class ConfigSelector:
 
                     x_best_array, best_observation = self._get_x_best(X_configurations)
 
+                #TODO: Hier X_conf und Y_objv_val eingefügt
+                print("HIER SIND WIR IM CUSTOM CONFIG")
                 self._acquisition_function.update(
                     model=self._model,
                     eta=best_observation,
                     incumbent_array=x_best_array,
                     num_data=len(self._get_evaluated_configs()),
                     X=X_configurations,
+                    X_conf=X,
+                    y_obj_val=Y
                 )
 
             # We want to cache how many entries we used because if we have the same number of entries

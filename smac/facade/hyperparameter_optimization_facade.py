@@ -6,7 +6,8 @@ from smac.acquisition.function.expected_improvement import EI
 from smac.acquisition.maximizer.local_and_random_search import (
     LocalAndSortedRandomSearch,
 )
-from smac.facade.abstract_facade import AbstractFacade
+#TODO SMAC3 Hier
+from SMAC3.smac.facade.abstract_facade import AbstractFacade
 from smac.initial_design.sobol_design import SobolInitialDesign
 from smac.intensifier.intensifier import Intensifier
 from smac.model.random_forest.random_forest import RandomForest

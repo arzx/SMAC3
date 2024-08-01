@@ -20,7 +20,8 @@ from smac.acquisition.maximizer.abstract_acqusition_maximizer import (
 from smac.callback.callback import Callback
 from smac.initial_design.abstract_initial_design import AbstractInitialDesign
 from smac.intensifier.abstract_intensifier import AbstractIntensifier
-from smac.main.config_selector import ConfigSelector
+#TODO SMAC3 Hier
+from SMAC3.smac.main.config_selector import ConfigSelector
 from smac.main.smbo import SMBO
 from smac.model.abstract_model import AbstractModel
 from smac.multi_objective.abstract_multi_objective_algorithm import (
@@ -28,7 +29,7 @@ from smac.multi_objective.abstract_multi_objective_algorithm import (
 )
 from smac.random_design.abstract_random_design import AbstractRandomDesign
 from smac.runhistory.dataclasses import TrialInfo, TrialValue
-from smac.runhistory.encoder.abstract_encoder import AbstractRunHistoryEncoder
+from SMAC3.smac.runhistory.encoder.abstract_encoder import AbstractRunHistoryEncoder
 from smac.runhistory.runhistory import RunHistory
 from smac.runner.abstract_runner import AbstractRunner
 from smac.runner.dask_runner import DaskParallelRunner
